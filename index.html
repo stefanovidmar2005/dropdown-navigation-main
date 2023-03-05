@@ -93,24 +93,32 @@
     </nav>
 
     <main class="main">
-      <img
-        class="main__image"
-        src="images/image-hero-mobile.png"
-        alt="hero image"
-      />
-      <div class="main__content">
-        <h1 class="main__content-title">Make remote work</h1>
-        <p class="main__content-description">
-          Get your team in sync, no matter your location. Streamline processes,
-          create team rituals, and watch productivity soar.
-        </p>
-        <button class="main__content-btn">Learn more</button>
-      </div>
-      <div class="main__clients">
-        <img src="images/client-databiz.svg" alt="client 1" />
-        <img src="images/client-audiophile.svg" alt="client 2" />
-        <img src="images/client-meet.svg" alt="client 3" />
-        <img src="images/client-maker.svg" alt="client 4" />
+      <picture>
+        <source
+          media="(max-width: 745px)"
+          srcset="images/image-hero-mobile.png"
+        />
+        <source
+          media="(min-width: 745px)"
+          srcset="images/image-hero-desktop.png"
+        />
+        <img src="images/image-hero-mobile.png" />
+      </picture>
+      <div class="main__description">
+        <div class="main__content">
+          <h1 class="main__content-title">Make remote work</h1>
+          <p class="main__content-description">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="main__content-btn">Learn more</button>
+        </div>
+        <div class="main__clients">
+          <img src="images/client-databiz.svg" alt="client 1" />
+          <img src="images/client-audiophile.svg" alt="client 2" />
+          <img src="images/client-meet.svg" alt="client 3" />
+          <img src="images/client-maker.svg" alt="client 4" />
+        </div>
       </div>
     </main>
   </body>
