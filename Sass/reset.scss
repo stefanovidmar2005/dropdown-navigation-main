@@ -2,6 +2,10 @@
 :root {
   font-size: 62.5%;
 }
+body {
+  position: relative;
+  font-family: $font-family;
+}
 html {
   box-sizing: border-box;
   font-size: $default-font-size;
