@@ -43,10 +43,6 @@ img {
   height: auto;
 }
 
-.oh {
-  overflow: hidden;
-}
-
 .overlay {
   position: absolute;
   top: 0;
@@ -57,7 +53,6 @@ img {
   backdrop-filter: blur(3px);
   z-index: 5;
   transition: background-color;
-  transition-delay: 0.2s;
 }
 
 .dropdown-hidden {
@@ -67,6 +62,11 @@ img {
 .hidden {
   opacity: 0;
 }
+@media (min-width: 950px) {
+  .hidden {
+    opacity: 1;
+  }
+}
 
 .nav-images {
   display: flex;
@@ -74,9 +74,21 @@ img {
   align-items: center;
   padding: 2rem;
 }
+@media (min-width: 950px) {
+  .nav-images {
+    justify-content: initial;
+    gap: 4rem;
+    padding: 1.5rem 6rem;
+  }
+}
 .nav-images .hamburger {
   cursor: pointer;
   z-index: 101;
+}
+@media (min-width: 950px) {
+  .nav-images .hamburger {
+    display: none;
+  }
 }
 
 .navigation {
@@ -88,29 +100,61 @@ img {
   right: 0;
   top: 0;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   width: 23rem;
   padding: 2rem;
   transition: all 0.4s ease-in-out;
   z-index: 100;
 }
+@media (min-width: 950px) {
+  .navigation {
+    position: relative;
+    width: initial;
+    height: initial;
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+  }
+}
 .navigation .navigation__main-list {
   overflow: hidden;
   margin-top: 4rem;
 }
+@media (min-width: 950px) {
+  .navigation .navigation__main-list {
+    display: flex;
+    margin-top: 0;
+  }
+}
 .navigation .navigation__main-list li {
   padding: 1rem;
+}
+@media (min-width: 950px) {
+  .navigation .navigation__main-list li {
+    margin-right: 1rem;
+  }
 }
 .navigation .navigation__main-list .nav__links-flex {
   display: flex;
   align-items: center;
   gap: 1.8rem;
 }
+@media (min-width: 950px) {
+  .navigation .navigation__main-list .nav__links-flex {
+    gap: 1rem;
+  }
+}
 .navigation .navigation__main-list a {
   font-size: 1.6rem;
   text-decoration: none;
   color: hsl(0deg, 0%, 41%);
   font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+.navigation .navigation__main-list a:hover {
+  color: rgb(20, 20, 20);
 }
 .navigation .navigation__main-list .menu-icon {
   cursor: pointer;
@@ -133,6 +177,12 @@ img {
   flex-direction: column;
   gap: 1.2rem;
 }
+@media (min-width: 950px) {
+  .navigation .cta {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
 .navigation .cta button {
   cursor: pointer;
   font-size: 1.6rem;
@@ -141,12 +191,25 @@ img {
   background: none;
   color: hsl(0deg, 0%, 41%);
   margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.navigation .cta button:hover {
+  color: rgb(20, 20, 20);
+}
+@media (min-width: 950px) {
+  .navigation .cta button {
+    margin-bottom: 0;
+  }
 }
 .navigation .cta .register {
   border: 1px solid rgb(20, 20, 20);
   padding: 1.1rem 2rem;
   border-radius: 15px;
-  transition: background-color 0.3s ease-in-out;
+}
+@media (min-width: 950px) {
+  .navigation .cta .register {
+    padding: 1.2rem 2.4rem;
+  }
 }
 .navigation .cta .register:hover {
   color: hsl(0deg, 0%, 98%);

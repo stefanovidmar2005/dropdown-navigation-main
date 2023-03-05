@@ -1,7 +1,4 @@
 @import "variables";
-.oh {
-  overflow: hidden;
-}
 .overlay {
   position: absolute;
   top: 0;
@@ -12,15 +9,16 @@
   backdrop-filter: blur(3px);
   z-index: 5;
   transition: background-color;
-  transition-delay: 0.2s;
 }
 // hide dropdown
 .dropdown-hidden {
   display: none;
 }
-// hide navigation
 .hidden {
   opacity: 0;
+  @include desktop() {
+    opacity: 1;
+  }
   // transform: translateX(20rem);
 }
 .nav-images {
@@ -28,9 +26,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  @include desktop() {
+    justify-content: initial;
+    gap: 4rem;
+    padding: 1.5rem 6rem;
+  }
   .hamburger {
     cursor: pointer;
     z-index: 101;
+    @include desktop() {
+      display: none;
+    }
   }
 }
 
@@ -43,27 +49,51 @@
   right: 0;
   top: 0;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   width: 23rem;
   padding: 2rem;
   transition: all 0.4s ease-in-out;
   z-index: 100;
+  @include desktop() {
+    position: relative;
+    width: initial;
+    height: initial;
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+  }
   .navigation__main-list {
     overflow: hidden;
     margin-top: 4rem;
+    @include desktop() {
+      display: flex;
+      margin-top: 0;
+    }
     li {
       padding: 1rem;
+      @include desktop() {
+        margin-right: 1rem;
+      }
     }
     .nav__links-flex {
       display: flex;
       align-items: center;
       gap: 1.8rem;
+      @include desktop() {
+        gap: 1rem;
+      }
     }
     a {
       font-size: 1.6rem;
       text-decoration: none;
       color: $medium-gray;
       font-weight: $fw-700;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $almost-black;
+      }
     }
     .menu-icon {
       cursor: pointer;
@@ -86,6 +116,10 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    @include desktop() {
+      flex-direction: row;
+      gap: 2rem;
+    }
     button {
       cursor: pointer;
       font-size: 1.6rem;
@@ -94,12 +128,21 @@
       background: none;
       color: $medium-gray;
       margin-bottom: 1rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $almost-black;
+      }
+      @include desktop() {
+        margin-bottom: 0;
+      }
     }
     .register {
       border: 1px solid $almost-black;
       padding: 1.1rem 2rem;
       border-radius: 15px;
-      transition: background-color 0.3s ease-in-out;
+      @include desktop() {
+        padding: 1.2rem 2.4rem;
+      }
       &:hover {
         color: $almost-white;
         background-color: $almost-black;
