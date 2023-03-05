@@ -17,9 +17,15 @@ hamburger.addEventListener("click", function (e) {
     target.src = oldSrc;
     document.body.classList.remove("overlay");
     navbar.classList.add("hidden");
+    // edge case that the user leaves the dropdown menu open and closes the menu
+    document
+      .querySelectorAll(".dropdown")
+      .forEach((list) => list.classList.add("dropdown-hidden"));
   }
+  document
+    .querySelectorAll(".menu-icon")
+    .forEach((icon) => (icon.src = "images/icon-arrow-down.svg"));
 });
-
 // Event Delegation on ul to find the target element that the li was clicked on
 // TODO: come up with a matching startegy we can use closest and classlists
 navigationList.addEventListener("click", function (e) {
@@ -39,5 +45,6 @@ navigationList.addEventListener("click", function (e) {
   } else {
     dropdown[0].classList.add("dropdown-hidden");
     icon.src = "images/icon-arrow-down.svg";
+    // edge case that the user may have had the dropdown open and then closed the menu therefore if he clicked again it woild be already open so to avoid this we will reset the dropdown when the user clicks on closing the menu
   }
 });
