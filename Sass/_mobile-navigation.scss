@@ -1,5 +1,7 @@
 @import "variables";
-
+.oh {
+  overflow: hidden;
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -19,7 +21,7 @@
 // hide navigation
 .hidden {
   opacity: 0;
-  transform: translateX(30rem);
+  transform: translateX(20rem);
 }
 .nav-images {
   display: flex;

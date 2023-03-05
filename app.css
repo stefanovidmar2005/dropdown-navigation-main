@@ -43,6 +43,10 @@ img {
   height: auto;
 }
 
+.oh {
+  overflow: hidden;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -62,7 +66,7 @@ img {
 
 .hidden {
   opacity: 0;
-  transform: translateX(30rem);
+  transform: translateX(20rem);
 }
 
 .nav-images {
