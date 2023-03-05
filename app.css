@@ -1,0 +1,121 @@
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 1.8rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay {
+  background-color: rgba(20, 20, 20, 0.65);
+  z-index: -1;
+}
+
+.dropdown-hidden {
+  display: none;
+}
+
+.hidden {
+  transform: translateX(30rem);
+  opacity: 0;
+}
+
+.nav-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.nav-images .hamburger {
+  cursor: pointer;
+  z-index: 100;
+}
+
+.navigation {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  background-color: hsl(0deg, 0%, 98%);
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 23rem;
+  padding: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+.navigation .navigation__main-list {
+  margin-top: 5rem;
+}
+.navigation .navigation__main-list li {
+  padding: 1rem;
+}
+.navigation .navigation__main-list .nav__links-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+.navigation .navigation__main-list a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 700;
+}
+.navigation .navigation__main-list .dropdown {
+  margin-top: 2rem;
+}
+.navigation .navigation__main-list .dropdown__list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+.navigation .navigation__main-list .dropdown__list-item img {
+  align-self: flex-start;
+}
+.navigation .cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/*# sourceMappingURL=app.css.map */

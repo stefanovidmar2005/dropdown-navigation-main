@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- JS -->
+    <script src="JS/main.js" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="app.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body style="overflow: hidden">
+    <div class="nav-images">
+      <img src="images/logo.svg" alt="brand logo" />
+      <img src="images/icon-menu.svg" alt="hamburger logo" class="hamburger" />
+    </div>
+    <nav class="navigation hidden">
+      <ul class="navigation__main-list">
+        <li class="dropdown__list">
+          <div class="nav__links-flex">
+            <a href="#">Features</a>
+            <img src="images/icon-arrow-down.svg" alt="#" />
+          </div>
+          <div class="dropdown dropdown-hidden">
+            <ul>
+              <li class="dropdown__list-item">
+                <img src="images/icon-todo.svg" alt="" />
+                <a href="#">Todo List</a>
+              </li>
+              <li class="dropdown__list-item">
+                <img src="images/icon-calendar.svg" alt="" />
+                <a href="#">Calendar</a>
+              </li>
+              <li class="dropdown__list-item">
+                <img src="images/icon-reminders.svg" alt="" />
+                <a href="#">Reminders</a>
+              </li>
+
+              <li class="dropdown__list-item">
+                <img src="images/icon-planning.svg" alt="" />
+                <a href="#">Planning</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropdown__list">
+          <div class="nav__links-flex">
+            <a href="#">Company</a>
+            <img class="menu-icon" src="images/icon-arrow-down.svg" alt="#" />
+          </div>
+          <div class="dropdown dropdown-hidden">
+            <ul>
+              <li class="dropdown__list-item">
+                <a href="#">History</a>
+              </li>
+              <li class="dropdown__list-item">
+                <a href="#">Our Team</a>
+              </li>
+              <li class="dropdown__list-item">
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">Careers</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+      </ul>
+      <div class="cta">
+        <button class="login">Login</button>
+        <button class="register">Register</button>
+      </div>
+    </nav>
+  </body>
+</html>
